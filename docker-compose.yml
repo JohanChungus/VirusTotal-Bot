@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+
+  workerdisk:
+
+    build: .
+
+    environment:
+
+      - ID=${ID}
+
+      - HASH=${HASH}
+
+      - TOKEN=${TOKEN} 
+
+  nginx:
+
+    build:
+
+      context: "."
+
+    ports:
+
+      - "9999:80"
+
+    network_mode: 'host'
+
+  service_cassandra:
+
+    image: 'cassandra:3.0'
+
+    ports:
+
+      - "19042:9042"
+
