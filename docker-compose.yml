@@ -7,4 +7,4 @@ services:
       - HASH=${HASH}
       - TOKEN=${TOKEN} 
       #sm
-      EXPOSE 8080
+      EXPOSE 8080/tcp
