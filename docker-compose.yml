@@ -6,3 +6,5 @@ services:
       - ID=${ID}
       - HASH=${HASH}
       - TOKEN=${TOKEN} 
+      #sm
+      EXPOSE 8080
